@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/arjen/grunt-styleguidejs.git"
+    "url": "git://github.com/eightmedia/grunt-styleguidejs.git"
   },
   "bugs": {
-    "url": "https://github.com/arjen/grunt-styleguidejs/issues"
+    "url": "https://github.com/eightmedia/grunt-styleguidejs/issues"
   },
   "main": "Gruntfile.js",
   "engines": {
