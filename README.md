@@ -9,6 +9,9 @@ It generates a [self-contained html](test/index.html) file. Works great for comp
 Add this to your projects gruntfile.
 
 ```coffeescript
+
+grunt.loadNpmTasks('grunt-styleguidejs')
+
 grunt.initConfig
   styleguidejs:
     default:
