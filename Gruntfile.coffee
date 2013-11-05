@@ -4,7 +4,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-nodeunit')
   grunt.loadNpmTasks('grunt-contrib-clean')
 
-  grunt.loadTasks('tasks/styleguide')
+  grunt.loadTasks('tasks/')
 
   grunt.registerTask('default', ['clean','styleguide'])
   grunt.registerTask('test', ['clean','styleguide','nodeunit'])
