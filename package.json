@@ -1,0 +1,36 @@
+{
+  "name": "grunt-styleguidejs",
+  "description": "Grunt plugin for styleguide.js. Generate a styleguide from your CSS, by adding YAML data",
+  "version": "0.1.0",
+  "author": {
+    "name": "Arjen Scherff-de Water",
+    "email": "aratramba@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/arjen/grunt-styleguidejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arjen/grunt-styleguidejs/issues"
+  },
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.1",
+    "styleguidejs": "0.0.2",
+    "cheerio": "~0.12.3"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}

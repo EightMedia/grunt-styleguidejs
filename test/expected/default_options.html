@@ -1,0 +1,224 @@
+<!DOCTYPE html><html><head><title>Styleguide</title><style type="text/css">article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  background: #fcfcfc;
+  font-size: 15px;
+  line-height: 22px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+code {
+  display: inline-block;
+  padding: 2px 4px;
+  color: green;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  font-size: 12px;
+  border-radius: 2px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+.generated {
+  float: right;
+  font-size: 11px;
+  color: #999;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px 20px 70px;
+}
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #333;
+  color: #fff;
+  z-index: 100;
+  -webkit-transition: width .3s;
+  -moz-transition: width .3s;
+  transition: width .3s;
+}
+.nav:hover {
+  width: 350px;
+}
+.nav ul {
+  padding: 0;
+  list-style: none;
+  margin: 15px 0;
+  opacity: .3;
+}
+.nav:hover ul {
+  opacity: 1;
+}
+.nav a {
+  padding: 5px 20px;
+  color: #aaa;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+}
+.nav a:hover {
+  color: #eee;
+  text-decoration: underline;
+}
+.section {
+  margin: 30px 0;
+}
+.section:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 0;
+  border-top: solid 3px #ddd;
+}
+.guide {
+  margin: 30px 0;
+}
+.guide h3 {
+  margin: 0 0 8px 0;
+}
+.guide h3 a.toggle {
+  float: right;
+  font-size: 10px;
+  color: #ccc;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.guide .description ol,
+.guide .description ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.guide .description p {
+  margin: 0 0 10px 0;
+}
+.guide .hidden {
+  display: none;
+}
+.guide .preview iframe {
+  width: 100%;
+  border: none;
+  margin: 0;
+  background: #fff;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+}
+.guide .source {
+  min-height: 60px;
+  font-size: 12px;
+  line-height: 17px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  color: green;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 5px;
+  padding: 20px;
+  white-space: pre;
+  overflow: auto;
+}
+.source_js,
+.source_css {
+  display: none;
+}
+</style></head><body><div class="container"><time class="generated">Generated at Tue Nov 05 2013 11:43:41 GMT+0100 (CET)</time><h1>Styleguide</h1><nav class="nav"><ul><li><a href="#Forms">Forms</a></li><li><a href="#FormsCommon">Forms - Common</a></li></ul></nav><div id="Forms" class="section"><h2>Forms</h2><div class="guide"><h3>Test<a href="#" class="toggle">Toggle source</a></h3><div class="description"><p>This is a description, and can also contain <strong>Markdown</strong></p>
+</div><div class="preview"><iframe scrolling="no"></iframe></div><div class="source hidden">&lt;div class=&quot;test&quot;&gt;This is a test&lt;/div&gt;
+&lt;div class=&quot;test2&quot;&gt;This is another test&lt;/div&gt;</div></div></div><div id="FormsCommon" class="section"><h2>Forms - Common</h2><div class="guide"><h3>Another test<a href="#" class="toggle">Toggle source</a></h3><div class="preview"><iframe scrolling="no"></iframe></div><div class="source hidden">&lt;input type=&quot;text&quot; class=&quot;test&quot;&gt;</div></div></div><textarea class="source_css">body {
+  font: 18px Verdana;
+}
+
+/***
+  title: Test
+  section: Forms
+  description: This is a description, and can also contain **Markdown**
+  example: |
+    &lt;div class=&quot;test&quot;&gt;This is a test&lt;/div&gt;
+    &lt;div class=&quot;test2&quot;&gt;This is another test&lt;/div&gt;
+***/
+.test,
+.test2,
+.test2[fancy=true] {
+  background: blue;
+  color: #fff;
+}
+
+
+/***
+  title: Another test
+  section: Forms - Common
+  example: &lt;input type=&quot;text&quot; class=&quot;test&quot;&gt;
+***/
+input.test {
+  background: green;
+}</textarea><textarea class="source_js"></textarea></div><script type="text/javascript">
+(function() {
+  var Guide, all_frames, guide, scaleIframes, source_css, source_js, _i, _len, _ref;
+
+  source_css = document.querySelector('textarea.source_css').textContent;
+
+  source_js = document.querySelector('textarea.source_js').textContent;
+
+  Guide = function(guide) {
+    var d, guide_source, iframe, preview, script, source, stylesheet;
+    preview = guide.querySelector('.preview');
+    source = guide.querySelector('.source');
+    iframe = guide.querySelector('.preview iframe');
+    if (!source) {
+      false;
+    }
+    guide_source = source.textContent;
+    d = iframe.contentWindow.document;
+    d.open();
+    d.write("<!DOCTYPE html><html><head></head><body style='padding: 20px'>" + guide_source + "</body></html>");
+    stylesheet = d.createElement('style');
+    stylesheet.innerHTML = source_css;
+    d.querySelector('head').appendChild(stylesheet);
+    script = d.createElement('script');
+    script.innerHTML = source_js;
+    d.querySelector('head').appendChild(script);
+    d.close();
+    return guide.querySelector("a.toggle").addEventListener("click", function(ev) {
+      preview.classList.toggle('hidden');
+      source.classList.toggle('hidden');
+      return ev.preventDefault();
+    });
+  };
+
+  _ref = document.querySelectorAll('.guide');
+  for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+    guide = _ref[_i];
+    Guide(guide);
+  }
+
+  all_frames = document.querySelectorAll('.preview iframe');
+
+  scaleIframes = function() {
+    var frame, _j, _len1, _results;
+    _results = [];
+    for (_j = 0, _len1 = all_frames.length; _j < _len1; _j++) {
+      frame = all_frames[_j];
+      _results.push(frame.height = frame.contentWindow.document.querySelector('html').scrollHeight);
+    }
+    return _results;
+  };
+
+  scaleIframes();
+
+  setInterval(scaleIframes, 500);
+
+}).call(this);
+</script></body></html>
