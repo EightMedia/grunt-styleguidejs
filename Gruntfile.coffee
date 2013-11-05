@@ -6,15 +6,15 @@ module.exports = (grunt) ->
 
   grunt.loadTasks('tasks/')
 
-  grunt.registerTask('default', ['clean','styleguide'])
-  grunt.registerTask('test', ['clean','styleguide','nodeunit'])
+  grunt.registerTask('default', ['clean','styleguidejs'])
+  grunt.registerTask('test', ['clean','styleguidejs','nodeunit'])
 
 
   grunt.initConfig
 
     # ---
     # styleguide
-    styleguide:
+    styleguidejs:
 
       # default
       default:
@@ -42,6 +42,6 @@ module.exports = (grunt) ->
     # ---
     # run tests
     nodeunit:
-      styleguide: ['test/styleguide_test.js'],
+      styleguidejs: ['test/styleguide_test.js'],
 
   

@@ -10,7 +10,7 @@ Add this to your projects gruntfile.
 
 ```coffeescript
 grunt.initConfig
-  styleguide:
+  styleguidejs:
     default:
       files: {
         'styleguide/index.html': ['css/all.css']
@@ -20,7 +20,7 @@ grunt.initConfig
 or with custom options:
 ``` coffeescript
 grunt.initConfig
-  styleguide:
+  styleguidejs:
     custom_options:
       options: {
         title: 'Custom Styleguide'
