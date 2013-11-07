@@ -33,6 +33,18 @@ module.exports = (grunt) ->
         }
 
 
+      # custom css
+      custom_css:
+        options: {
+          title: 'Custom Styleguide'
+          customCSS: 'test/fixtures/custom-css/style.css'
+          appendCustomCSS: ['test/fixtures/custom-css/append-style.css']
+        }
+        files: {
+          'tmp/custom_css.html': ['test/fixtures/all.css']
+        }
+
+
     # ---
     # clean up folders
     clean:

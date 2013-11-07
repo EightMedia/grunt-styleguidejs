@@ -28,6 +28,8 @@ grunt.initConfig
       options: {
         title: 'Custom Styleguide'
         includejs: ['modernizr.js','jquery.js']
+        customCSS: 'test/fixtures/custom-css/style.css'
+        appendCustomCSS: ['test/fixtures/custom-css/append-style.css']
       }
       files: {
         'styleguide/index.html': ['css/all.css']
@@ -36,36 +38,93 @@ grunt.initConfig
 
 then in `css/all.css`:
 
-```html
+````css
 body {
-  font: 18px Verdana;
+  font: 16px Verdana;
 }
 
 /***
-  title: Test
-  section: Forms
-  description: This is a description, and can also contain **Markdown**
-  example: |
-    <div class="test">This is a test</div>
-    <div class="test2">This is another test</div>
+  title: Square buttons
+  section: Buttons
+  description: Very pretty square buttons
+  example:
+    <a href="" class="btn btn-small">button</a>
+    <a href="" class="btn btn-medium">button</a>
+    <a href="" class="btn btn-large">button</a>
 ***/
-.test,
-.test2,
-.test2[fancy=true] {
-  background: blue;
-  color: #fff;
+
+.btn{
+  display: inline-block;
+  padding: .3em .6em;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: darkslateblue;
+}
+.btn:hover{
+  background-color: #38306E;
+}
+.btn-small{
+  font-size: .8em;
+}
+.btn-medium{
+  font-size: 1em;
+}
+.btn-large{
+  font-size: 1.3em;
 }
 
 
 /***
-  title: Another test
-  section: Forms - Common
-  example: <input type="text" class="test">
+  title: Round buttons
+  section: Buttons
+  description: Very pretty rounded buttons
+  example:
+    <a href="" class="btn btn-small btn-round">button</a>
+    <a href="" class="btn btn-medium btn-round">button</a>
+    <a href="" class="btn btn-large btn-round">button</a>
 ***/
-input.test {
-  background: green;
+
+.btn-round{
+  border-radius: 20px;
 }
-```
+
+
+/***
+  title: Links
+  section: Buttons
+  description: Very pretty rounded buttons
+  example:
+    <a href="" class="btn-link">button</a>
+***/
+
+.btn-link{
+  background: none;
+  color: darkslateblue;
+}
+.btn-link:hover{
+  text-decoration: none;
+}
+
+/***
+  title: Internal anchor
+  section: References
+  description: Reference to anchor in the same section
+  example:
+    - <ul>
+    - &li | 
+      <li>list item</li>
+    - *li
+    - *li
+    - *li
+    - *li
+    - </ul>
+***/
+
+li{
+  color: darkslateblue;
+}
+````
 
 
 For more info see [https://github.com/EightMedia/styleguide.js/](https://github.com/EightMedia/styleguide.js/)

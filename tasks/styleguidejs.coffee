@@ -12,6 +12,8 @@ module.exports = (grunt) ->
     options = @options {
       title: 'Styleguide'
       includejs: []
+      customCSS: ''
+      appendCustomCSS: []
     }
 
     # Iterate over all specified file groups.
@@ -34,6 +36,16 @@ module.exports = (grunt) ->
           for jsfile in options.includejs
             if grunt.file.exists(jsfile)
               s.includeJS(jsfile)
+
+
+          # custom css
+          if options.customCSS
+            s.customCSS(options.customCSS)
+
+          # append custom css
+          for append in options.appendCustomCSS
+            if grunt.file.exists(append)
+              s.appendCustomCSS(append)
 
 
           # create file for first time
