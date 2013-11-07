@@ -1,7 +1,7 @@
 {
   "name": "grunt-styleguidejs",
   "description": "Grunt plugin for styleguide.js. Generate a styleguide from your CSS, by adding YAML data",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Arjen Scherff-de Water",
     "email": "aratramba@gmail.com"
