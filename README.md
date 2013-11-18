@@ -1,8 +1,10 @@
 # Grunt plugin for [Styleguide.js](https://github.com/EightMedia/styleguide.js)
 
 Generate a styleguide from your CSS, by adding [YAML](http://en.wikipedia.org/wiki/YAML) data in the comments. 
-It generates a [self-contained html](test/index.html) file. Works great for component based CSS.
+It generates a [self-contained html](https://rawgithub.com/EightMedia/styleguide.js/master/test/expected/index.html) file. Works great for component based CSS.
 
+### Screenshot
+![Screenshot](https://rawgithub.com/EightMedia/styleguide.js/master/screenshot.png)
 
 
 ### How to use
@@ -36,7 +38,7 @@ grunt.initConfig
       }
 ```
 
-then in `css/all.css`:
+then in your `css/all.css`:
 
 ````css
 body {
