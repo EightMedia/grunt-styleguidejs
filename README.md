@@ -3,13 +3,7 @@
 Generate a styleguide from your CSS, by adding [YAML](http://en.wikipedia.org/wiki/YAML) data in the comments. 
 It generates a [self-contained html](https://rawgithub.com/EightMedia/styleguide.js/master/test/expected/index.html) file. Works great for component based CSS.
 
-<<<<<<< HEAD
-### Screenshot
 ![Screenshot](https://rawgithub.com/EightMedia/styleguide.js/master/screenshot.png)
-=======
-[![NPM](https://nodei.co/npm/grunt-styleguidejs.png?downloads=true&stars=true)](https://nodei.co/npm/grunt-styleguidejs/)
->>>>>>> d0e7d8f7e5bea8b64a7ec84cd438ea0e79a2c30c
-
 
 ### How to use
 Add this to your projects gruntfile.
