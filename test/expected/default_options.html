@@ -233,7 +233,7 @@ hr.small{
 .source_css {
   display: none;
 }
-</style></head><body><div class="container"><h1 class="title-large">Styleguide</h1><time class="generated">Generated at Thu Nov 07 2013 13:33:35 GMT+0100 (CET)</time><hr class="small"><nav class="index"><ul><li>&rsaquo; <a href="#Forms">Forms</a><ul><li>&rsaquo; <a href="#Forms0">Test</a></li></ul></li><li>&rsaquo; <a href="#FormsCommon">Forms - Common</a><ul><li>&rsaquo; <a href="#FormsCommon0">Another test</a></li></ul></li></ul></nav><hr class="small"><nav class="nav"><ul><li><a href="#Forms">&rsaquo; Forms</a></li><li><a href="#FormsCommon">&rsaquo; Forms - Common</a></li></ul></nav><div id="Forms" class="section"><h2 class="title-medium">Forms</h2><div id="Forms0" class="guide"><h3 class="title-small">Test<a href="#" class="toggle">Toggle source</a></h3><div class="description"><p>This is a description, and can also contain <strong>Markdown</strong></p>
+</style></head><body><div class="container"><h1 class="title-large">Styleguide</h1><time class="generated">Generated at Thu Jan 16 2014 09:18:30 GMT+0100 (CET)</time><hr class="small"><nav class="index"><ul><li>&rsaquo; <a href="#Forms">Forms</a><ul><li>&rsaquo; <a href="#Forms0">Test</a></li></ul></li><li>&rsaquo; <a href="#FormsCommon">Forms - Common</a><ul><li>&rsaquo; <a href="#FormsCommon0">Another test</a></li></ul></li></ul></nav><hr class="small"><nav class="nav"><ul><li><a href="#Forms">&rsaquo; Forms</a></li><li><a href="#FormsCommon">&rsaquo; Forms - Common</a></li></ul></nav><div id="Forms" class="section"><h2 class="title-medium">Forms</h2><div id="Forms0" class="guide"><h3 class="title-small">Test<a href="#" class="toggle">Toggle source</a></h3><div class="description"><p>This is a description, and can also contain <strong>Markdown</strong></p>
 </div><div class="preview"><iframe scrolling="no"></iframe></div><div class="source hidden">&lt;div class=&quot;test&quot;&gt;This is a test&lt;/div&gt;
 &lt;div class=&quot;test2&quot;&gt;This is another test&lt;/div&gt;</div></div><hr class="small"></div><div id="FormsCommon" class="section"><h2 class="title-medium">Forms - Common</h2><div id="FormsCommon0" class="guide"><h3 class="title-small">Another test<a href="#" class="toggle">Toggle source</a></h3><div class="preview"><iframe scrolling="no"></iframe></div><div class="source hidden">&lt;input type=&quot;text&quot; class=&quot;test&quot;&gt;</div></div><hr class="small"></div><textarea class="source_css">body {
   font: 18px Verdana;
@@ -262,8 +262,7 @@ hr.small{
 ***/
 input.test {
   background: green;
-}</textarea><textarea class="source_js"></textarea></div><script type="text/javascript">
-(function() {
+}</textarea><textarea class="source_js"></textarea></div><script>(function() {
   var Guide, all_frames, guide, scaleIframes, source_css, source_js, _i, _len, _ref;
 
   source_css = document.querySelector('textarea.source_css').textContent;
@@ -276,7 +275,7 @@ input.test {
     source = guide.querySelector('.source');
     iframe = guide.querySelector('.preview iframe');
     if (!source) {
-      false;
+      return false;
     }
     guide_source = source.textContent;
     d = iframe.contentWindow.document;
