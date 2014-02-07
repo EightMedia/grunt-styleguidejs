@@ -29,7 +29,8 @@ grunt.initConfig
         title: 'Custom Styleguide'
         includejs: ['modernizr.js','jquery.js']
         customCSS: 'test/fixtures/custom-css/style.css'
-        appendCustomCSS: ['test/fixtures/custom-css/append-style.css']
+        appendCustomCSS: ['test/fixtures/custom-css/append-style.css'],
+        templateFile: 'styleguide/styleguide.jade'
       }
       files: {
         'styleguide/index.html': ['css/all.css']

@@ -53,5 +53,5 @@ module.exports = (grunt) ->
             grunt.file.write(f.dest)
 
           # render file
-          s.renderToFile(f.dest)
+          s.renderToFile(f.dest, options.templateFile)
           
