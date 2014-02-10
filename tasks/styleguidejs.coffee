@@ -21,7 +21,7 @@ module.exports = (grunt) ->
 
       # Concat specified files.
       src = f.src
-        .filter (filepath) -> 
+        .filter (filepath) ->
           return grunt.file.exists(filepath) or grunt.file.isFile(filepath)
 
         .forEach (filepath) ->
@@ -31,6 +31,10 @@ module.exports = (grunt) ->
 
           # parse css file
           s.parseFile(filepath)
+
+          # preprocess parsed yaml
+          if options.preprocess
+            options.preprocess(s.sections);
 
           # include js
           for jsfile in options.includejs
