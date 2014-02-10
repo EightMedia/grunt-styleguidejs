@@ -33,7 +33,7 @@ grunt.initConfig
         templateFile: 'styleguide/styleguide.jade',
         preprocess: function(sections) {
           for (var i = 0; i < sections.length; i++) {
-            sections[i].title += " (" + sections[i].length + ")";
+            sections[i].title += " (" + sections[i].guides.length + ")";
           }
         }
       }

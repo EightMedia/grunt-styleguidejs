@@ -34,7 +34,7 @@ module.exports = (grunt) ->
 
           # preprocess parsed yaml
           if options.preprocess
-            options.preprocess(s.sections);
+            options.preprocess.call(grunt, s.sections);
 
           # include js
           for jsfile in options.includejs
