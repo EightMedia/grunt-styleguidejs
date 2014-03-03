@@ -27,6 +27,10 @@ module.exports = (grunt) ->
         options: {
           title: 'Custom Styleguide'
           includejs: ['test/fixtures/includejs/test1.js','test/fixtures/includejs/test2.js']
+          preprocess: (sections) ->
+            for i in [0...sections.length]
+              sections[i].title += " (" + sections[i].guides.length + ")"
+
         }
         files: {
           'tmp/custom_options.html': ['test/fixtures/all.css']
