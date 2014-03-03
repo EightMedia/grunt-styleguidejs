@@ -1,6 +1,6 @@
 # Grunt plugin for [Styleguide.js](https://github.com/EightMedia/styleguide.js)
 
-Generate a styleguide from your CSS, by adding [YAML](http://en.wikipedia.org/wiki/YAML) data in the comments. 
+Generate a styleguide from your CSS, by adding [YAML](http://en.wikipedia.org/wiki/YAML) data in the comments.
 It generates a [self-contained html](https://rawgithub.com/EightMedia/styleguide.js/master/test/expected/index.html) file. Works great for component based CSS.
 
 ![Screenshot](https://rawgithub.com/EightMedia/styleguide.js/master/screenshot.png)
@@ -29,7 +29,13 @@ grunt.initConfig
         title: 'Custom Styleguide'
         includejs: ['modernizr.js','jquery.js']
         customCSS: 'test/fixtures/custom-css/style.css'
-        appendCustomCSS: ['test/fixtures/custom-css/append-style.css']
+        appendCustomCSS: ['test/fixtures/custom-css/append-style.css'],
+        templateFile: 'styleguide/styleguide.jade',
+        preprocess: function(sections) {
+          for (var i = 0; i < sections.length; i++) {
+            sections[i].title += " (" + sections[i].guides.length + ")";
+          }
+        }
       }
       files: {
         'styleguide/index.html': ['css/all.css']
@@ -112,7 +118,7 @@ body {
   description: Reference to anchor in the same section
   example:
     - <ul>
-    - &li | 
+    - &li |
       <li>list item</li>
     - *li
     - *li
