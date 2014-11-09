@@ -24,6 +24,8 @@
     "styleguidejs": "0.1.x"
   },
   "keywords": [
-    "gruntplugin styleguide css"
+    "gruntplugin",
+    "styleguide",
+    "css"
   ]
 }
